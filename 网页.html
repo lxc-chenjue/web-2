@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宇宙畅想</title>
+	<style>
+		 ul{
+	    	list-style-type: none;
+	    }
+	    .acolor{
+	    	text-decoration: none;
+            color: #000;
+	    }
+	    li:hover{
+            color:#000;
+            background-color:#5882FA;
+	    }
+		.div1{
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+			padding: 0;
+		}
+		.div2{
+			float: left;
+		}
+		.div3{
+			float: right;
+			position: relative;
+			top: 30px;
+			font-size: 12px;
+			text-align: right;
+		}
+		.div4{
+			border: 1px solid #000;
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.div5{
+            width: 1000px;
+            height: 30px;
+            margin: 0 auto;
+		}
+		.div6{
+			font-size: 15px;
+			font-weight: bold;
+			text-align: center;
+			display: inline-block;
+			width: 100px;
+			float: left;
+		}
+		.div7{
+			position: relative;
+            width: 600px;
+            height: 400px;
+            margin:0 auto 0 auto;
+            box-shadow: 0 0 5px blue;
+            overflow: hidden;
+		}
+		.wrap {
+            position: absolute;
+            width: 4200px;
+            height: 400px;
+            z-index: 1;
+        }
+        .div7 .wrap img {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+        .div7 .buttons {
+            position: absolute;
+            right: 150px;
+            bottom:20px;
+            width: 100px;
+            height: 10px;
+            z-index: 2;
+        }
+        .div7 .buttons span{
+            margin-left: 5px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #819FF7;
+            text-align: center;
+            color:white;
+            cursor: pointer;
+        }
+        .div7 .buttons span.on{
+            background-color: blue;
+        }
+        .div7 .arrow {
+            position: absolute;
+            top: 35%;
+            color: #819FF7;
+            padding:0px 14px;
+            border-radius: 50%;
+            font-size: 50px;
+            z-index: 2;
+            display: none;
+        }
+        .div7 .arrow_left {
+            left: 10px;
+        }
+        .div7 .arrow_right {
+            right: 10px;
+        }
+        .div7:hover .arrow {
+            display: block;
+        }
+        .div7 .arrow:hover {
+            background-color: rgba(0,0,0,0.2);
+        }
+		.div8{
+			width: 1200px;
+			height: 60px;
+			margin: 0 auto;
+			box-shadow:0px 2px 2px 0px rgba(118,118,118,0.2);
+		}
+		.div8 li{
+		display: inline-block;
+		margin-top: 21px;
+		padding: 0 34px;
+		border-right: 1px solid grey;
+		font: 16px MicrosoftYaHei-Bold;
+		}
+		.div8 li:nth-last-child(2) , li:last-child{
+			border: 0px;
+		}
+		.div8 li:first-child{
+			color: #00A3FF;
+			font-weight: bold;
+		}
+		.div8 li:last-child{
+			color: #00A3FF;
+			margin-left: 140px;
+			font-size: 14px;
+		}
+		.div9{
+			width: 1200px;
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+		.div9 p{
+		display: inline-block;
+		}
+		.div9 p:first-child{
+			font: 20px MicrosoftYaHei;
+		}
+		.div9 p:first-child~p{
+			font: 12px MicrosoftYaHei;
+			margin-left: 1050px;
+			color: #A5A5A5;
+		}
+		.div9 ul{
+			width: 1200px;
+			height: 600px;
+			margin-top: 20px;
+		}
+		.div9 ul li{
+		width: 228px;
+		height: 255px;
+		float: left;
+		margin-right: 3px;
+		margin-bottom: 15px;
+		box-shadow:2px 2px 2px 0px rgba(118,118,118,0.2);
+		}
+		.div9 li p{
+			width: 185px;
+			margin: 12px 23px;
+			font: 14px MicrosoftYaHei;
+		}
+		.div9 li p:last-child{
+			color: #FF7B2D;
+			font-weight: bold;
+		}
+		.div9 li p:last-child span{
+			color: #767676;
+			font-weight: normal;
+		}
+		.div0{
+		width: 1200px;
+		height: 150px;
+		margin: 0 auto;
+		padding: 100px;
+		}
+		.div0 div,.div0 ul{
+			float: left;
+		}
+		.div0 div p:first-child{
+			font: bold 36px MicrosoftYaHei-Bold;
+			color: blue;
+		}
+		.div0 div p:nth-child(2){
+			font: 12px SimSun;
+			color: #A9BCF5;
+			margin: 20px 0;
+		}
+		.div0 div button{
+			width: 120px;
+			height: 36px;
+			border: 1px solid #81BEF7;
+			color: #81BEF7;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		.div0 li{
+			font: 12px SimSun;
+			margin: 7px 55px;
+		}
+		.div0 ul:nth-child(2){
+			margin-left: 230px;
+		}
+		.div0 ul li:first-child{
+			font: 16px MicrosoftYaHei;
+		}
+		body{
+			background-image: url(an.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		.p1{
+			margin-left: 300px;
+			font-size: 1px;
+			color: gray;
+		}
+		#box
+		{
+			width:900px;
+			height:400px;
+			position:relative;
+			margin:100px auto;
+			border: 1px solid black;
+		}
+		#img1
+		{
+			width:400px;
+			height:200px;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#slider
+		{
+			width:200px;
+			height:200px;
+			position:absolute;
+			left:0;
+			top:0;
+			background:#CCC;
+			opacity:0.4;
+			cursor: move;
+			filter:alpha(opacity=40);
+			display: none;
+		}
+		#img2
+		{
+			position:absolute;
+			right:0;
+			top:0;
+			width:400px;
+			height:400px;
+			overflow:hidden;
+			display: none;
+		}
+		#Bimg
+		{
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#timer{
+			margin-left: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer" style="color:#8181F7"></div>
+	<div>
+		<div class="div1">
+			<div class="div2">
+				<img src="images/logo.jpg">
+			</div>
+			<div class="div3">
+				<a class="acolor" href="">什么也搜不到的网页 </a><button>搜索</button>
+				<br>
+				<input type="text">
+			</div>
+		</div>
+		<br>
+		<div class="div4">
+			
+		</div>
+		<br/>
+		<div class="div5">
+			<ul>
+				<div class="div6"><li><a class="acolor" href="">首页</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">网页概况</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">科学研究</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">人才推荐</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">观测方向</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">公共服务</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">其他设置</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">注册</a></li></div>
+				<div class="div6"><li><a class="acolor" href="">登录</a></li></div>
+			</ul>
+		</div>
+		<br/>
+		<div class="div7">
+			<div class="wrap" style="left:-600px;">
+				<img src="images/ah.jpg">
+				<img src="images/timg.jpg">
+				<img src="images/t.jpg">
+				<img src="images/u.jpg">
+				<img src="images/av.jpg">
+				<img src="images/ah.jpg">
+				<img src="images/timg.jpg">
+			</div>
+			<div class="buttons">
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+			</div>
+			<a href="javascript:;" class="arrow arrow_left">&lt;</a>
+			<a href="javascript:;" class="arrow arrow_right">&gt;</a>
+		</div>
+	</div>
+	<ul class="div8">
+		<li>最新</li>
+		<li>精品推荐</li>
+		<li>猜你喜欢</li>
+		<li>专栏选择</li>
+		<li>可下载</li>
+		<li>用户推荐</li>
+		<li>可转载</li>
+		<li>修改兴趣</li>
+	</ul>
+	<div class="div9">
+		<p>精品推荐</p>
+		<p>查看全部</p>
+		<ul>
+			<li>
+				<img src="images/aa.jpg">
+				<p>网络图片1</p>
+				<p>高级<span> · 随便写点</span></p>
+			</li>
+			<li>
+				<img src="images/af.jpg">
+				<p>网络图片2</p>
+				<p>高级<span> · 图源百度</span></p>
+			</li>
+			<li>
+				<img src="images/ai.jpg">
+				<p>网络图片3</p>
+				<p>高级<span> · 就是图库里</span></p>
+			</li>
+			<li>
+				<img src="images/aj.jpg">
+				<p>网络图片4</p>
+				<p>高级<span> · 这种图片比较多</span></p>
+			</li>
+			<li>
+				<img src="images/al.jpg">
+				<p>网络图片5</p>
+				<p>高级<span> · 就这样了</span></p>
+			</li>
+			<li>
+				<img src="images/am.jpg">
+				<p>网络图片6</p>
+				<p>高级<span> · 1125人在看qwq</span></p>
+			</li>
+			<li>
+				<img src="images/at.jpg">
+				<p>网络图片7</p>
+				<p>高级<span> · 1115人在看twt</span></p>
+			</li>
+			<li>
+				<img src="images/x.jpg">
+				<p>网络图片8</p>
+				<p>高级<span> · 1135人在看tvt</span></p>
+			</li>
+			<li>
+				<img src="images/s.jpg">
+				<p>网络图片9</p>
+				<p>高级<span> · 1105人在看twt</span></p>
+			</li>
+			<li>
+				<img src="images/v.jpg">
+				<p>网络图片10</p>
+				<p>高级<span> · 1145人在看qvq</span></p>
+			</li>
+
+		</ul>
+
+	</div>
+	<div class="p1">"有两样东西，越是经常而持久地对它们进行反复思考，它们就越是使心灵充满常新而日益增长的惊赞和敬畏：我头上的星空和我心中的道德法则。"————康德</div>
+	<div id="box">
+        <div id="img1">
+            <img src="images/z(1).jpg" width="400" height="200"/>
+            <div id="slider"></div>
+        </div>
+        <div id="img2">
+            <img src="images/z.jpg"  id="Bimg">
+        </div>
+    </div> 
+	<div class="div0">
+		<div>
+			<p>星空畅想</p>
+			<p>宇宙是广袤空间和其中存在的各种天体以及弥漫物质的总称。</p>
+			<button>下载</button>
+		</div>
+		<ul>
+			<li>关于</li>
+			<li>管理团队</li>
+			<li>工作机会</li>
+			<li>客户服务</li>
+			<li>帮助</li>
+		</ul>
+		<ul>
+			<li>新手指南</li>
+			<li>如何注册</li>
+			<li>如何登录</li>
+			<li>如何注销</li>
+			<li>原创勿信</li>
+			<li>图源百度</li>
+			<li>总之现在大概是在凑行</li>
+			<li>我也不知道写了点什么</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		//一个手动轮播图
+		var wrap = document.querySelector(".wrap");
+        var next = document.querySelector(".arrow_right");
+        var prev = document.querySelector(".arrow_left");
+        next.onclick = function () {
+            next_pic();
+        }
+        prev.onclick = function () {
+            prev_pic();
+        }
+        function next_pic () {
+            var newLeft = parseInt(wrap.style.left)-600;
+            wrap.style.left = newLeft + "px";
+        }
+        function prev_pic () {
+            var newLeft = parseInt(wrap.style.left)+600;
+            wrap.style.left = newLeft + "px";
+        }
+        function next_pic () {
+            var newLeft;
+            if(wrap.style.left === "-3600px"){
+                newLeft = -1200;
+            }else{
+                newLeft = parseInt(wrap.style.left)-600;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+        function prev_pic () {
+            var newLeft;
+            if(wrap.style.left === "0px"){
+                newLeft = -2400;
+            }else{
+                newLeft = parseInt(wrap.style.left)+600;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+
+		//一个没什么用的倒计时
+		var maxtime = 5*60;
+		function CountDown(){ 
+			if(maxtime>=0){ 
+				minutes = Math.floor(maxtime/60); 
+				seconds = Math.floor(maxtime%60); 
+				msg = "距离弹窗还有"+minutes+"分"+seconds+"秒"; 
+				document.all["timer"].innerHTML=msg; 
+				if(maxtime == 5*60) alert('5分钟倒计时'); 
+				--maxtime; 
+			} 
+			else{ 
+				clearInterval(timer); 
+				alert("您已经访问5分钟了，真的还要继续看吗qwq？"); 
+			} 
+		} 
+		timer = setInterval("CountDown()",1000);
+
+		//一个放大镜
+		var box =document.getElementById("box");
+        var img1=document.getElementById("img1");
+        var slider=document.getElementById("slider");
+        var img2=document.getElementById("img2");
+        var Bimg=document.getElementById("Bimg");
+
+        img1.onmouseover = function(){
+            slider.style.display = 'block';
+            img2.style.display = 'block';
+        }
+        img1.onmouseout = function(){
+            slider.style.display = 'none';
+            img2.style.display = 'none';
+        }
+        img1.onmousemove = function(ev){
+            var ol = ev.clientX - box.offsetLeft - 200/2;
+            var ot = ev.clientY - box.offsetTop - 100/2;
+            ol = ol>200?200:ol<0?0:ol;
+            ot = ot>100?100:ot<0?0:ot;
+            slider.style.left = ol + 'px';
+            slider.style.top = ot + 'px';
+
+            var Bl = -ol*400/200;
+            var Bt = -ot*200/100;
+            Bimg.style.left = Bl + 'px';
+            Bimg.style.top = Bt + 'px';
+        }
+	</script>
+</body>
+</html>
